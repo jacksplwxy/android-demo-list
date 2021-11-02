@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Carson_Ho</title>
+    </head>
+    <body style="background:#ececec;">
+        <p style="text-align:center;">测试通过WebView调用JS代码</p>
+        <div id='text'></div>
+    </body>
+    <script>
+       // Android需要调用的js方法
+       function loadUrlCallJS(){
+          document.getElementById('text').innerHTML='我被android通过WebView的loadUrl()调用了';
+          alert("Android调用了JS的callJS方法");
+       }
+
+       // Android需要调用的js方法
+       function evaluateJavascriptCallJS(){
+          document.getElementById('text').innerHTML='我被android通过WebView的evaluateJavascript()调用了';
+          alert("Android调用了JS的callJS方法");
+       }
+    </script>
+
+
+</html>
