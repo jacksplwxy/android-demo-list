@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/option_color"
+        app:showAsAction="never"
+        android:title="optionMenu-->改变字体颜色"/>
+    <!--二级菜单-->
+    <item
+        android:id="@+id/option_textSize"
+        app:showAsAction="never"
+        android:title="optionMenu-->改变字体大小">
+        <menu>
+            <group>
+                <item
+                    android:title="字体大小为30sp"
+                    android:id="@+id/font_san"
+                    app:showAsAction="never">
+                </item>
+                <item
+                    android:id="@+id/font_wu"
+                    app:showAsAction="never"
+                    android:title="字体大小为50sp">
+                </item>
+            </group>
+        </menu>
+    </item>
+</menu>
