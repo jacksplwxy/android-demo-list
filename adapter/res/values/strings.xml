@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">start</string>
+
+    <array name="anime_name">
+        <item>海贼王</item>
+        <item>进击的巨人</item>
+        <item>火影忍者</item>
+        <item>斩赤红之瞳</item>
+        <item>秦时明月</item>
+        <item>西游记</item>
+        <item>葫芦娃</item>
+    </array>
+
+    <array name="anime_author">
+        <item>尾田荣一郎</item>
+        <item>谏山创</item>
+        <item>岸本齐史</item>
+        <item>タカヒロ</item>
+        <item>玄机科技</item>
+        <item>央视</item>
+        <item>上海美术电影</item>
+    </array>
+</resources>
