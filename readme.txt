@@ -922,6 +922,7 @@
         ~ onUnbind()：解绑服务
     ~ 《Carson带你学Android：Service生命周期完全解析》：https://www.jianshu.com/p/8d0cde35eb10
   · Service类型：
+    ~ Android中的服务和windows中的服务是类似的东西，服务一般没有用户操作界面，它运行于系统中不容易被用户发觉，可以使用它开发如监控之类的程序。服务不能自己运行，需要通过调用Context.startService()或Context.bindService()方法启动服务。这两个方法都可以启动Service，但是它们的使用场合有所不同。使用startService()方法启用服务，调用者与服务之间没有关连，即使调用者退出了，服务仍然运行。使用bindService()方法启用服务，调用者与服务绑定在了一起，调用者一旦退出，服务也就终止，大有“不求同时生，必须同时死”的特点。
     ~ 运行地点：
       ~ 本地服务
         ~ 特点：
@@ -957,13 +958,15 @@
         ~ 用bindService()启动的可通信服务：
           ~ 特点：调用者退出后，随着调用者销毁
           ~ 场景：服务需与Activity或Service通信，需控制服务开始时刻
-        ~ 用startService()、bindService()启动的可通信服务：
-          ~ 特点：调用者退出后，随着调用者销毁
-          ~ 场景：服务需与Activity或Service通信，不需控制服务开始时刻（服务一开始便运行）
+        ~ 特点：
+          ~ 调用者退出后，随着调用者销毁
+          ~ 调用者退出了，Srevice就会调用onUnbind-->onDestroyed，所谓绑定在一起就共存亡了。
+        ~ 场景：服务需与Activity或Service通信，不需控制服务开始时刻（服务一开始便运行）
       ~ 不可通信服务
         ~ 特点：
           ~ 用startService()启动
           ~ 调用者退出后Service仍然存在
+          ~ 如果是调用者直接退出而没有调用stopService的话，Service会一直在后台运行。下次调用者再起来仍然可以stopService。
         ~ 场景：服务不需要与Activity或Service通信
   · Service与Thread的区别：
     ~ Service与Thread无任何关系
