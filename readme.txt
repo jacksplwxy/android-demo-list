@@ -993,6 +993,7 @@
 
 * ContentProvider：
   · 定义：即内容提供者，是Android四大组件之一
+  · 背景：当应用继承ContentProvider类，并重写该类用于提供数据和存储数据的方法，就可以向其他应用共享其数据。ContentProvider为存储和获取数据提供了统一的接口。虽然使用其他方法也可以对外共享数据，但数据访问方式会因数据存储的方式而不同，如采用文件方式对外共享数据，需要进行文件操作读写数据；采用sharedpreferences共享数据，需要使用sharedpreferences API读写数据。而使用ContentProvider共享数据的好处是统一了数据访问方式。
   · 作用：进程间进行数据交互或者共享，即跨进程通信
   · 原理：
     ~ ContentProvider的底层原理 = Android中的Binder机制
