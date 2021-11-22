@@ -360,6 +360,10 @@
     ~ font/：带有扩展名的字体文件（如 .ttf、.otf 或 .ttc），或包含 <font-family> 元素的 XML 文件。如需详细了解作为资源的字体，请参阅 XML 中的字体。
 
 
+
+
+
+
 * Android四大组件：
   · Activity
   · Service
@@ -715,6 +719,18 @@
   · 文档：
     ~ 《Carson带你学Android：Fragment最全面介绍 & 使用方法解析》：https://www.jianshu.com/p/2bf21cefb763
 
+* SystemUI
+  · StatusBar：状态栏，知消息提示和状态展现
+  · NavigationBar：导航栏，返回、HOME、Recent
+  · Notification Panel：通知栏，展示系统或应用通知内容。提供快速系统设置开关。
+  · KeyGuard：锁屏模块可以看做单独的应用，提供基本的手机个人隐私保护
+  · Recents：近期应用管理，以堆叠栈的形式展现。
+  · VolumeUI：来用展示或控制音量的变化：媒体音量、铃声音量与闹钟音量
+  · 截屏界面：长按电源键+音量下键后截屏，用以展示截取的屏幕照片/内容
+  · PowerUI：主要处理和Power相关的事件，比如省电模式切换、电池电量变化和开关屏事件等。
+  · RingtonePlayer：铃声播放
+  · StackDivider：控制管理分屏
+  · PipUI：提供对于画中画模式的管理
 
 * BroadcastReceiver：
   · 广播是一个全局的监听器，属于Android四大组件之一
@@ -1652,8 +1668,18 @@
 
 
 
-
-
+* 前端与android的对应关系：
+  · 字体：
+    《深究移动端适配那些坑：小数像素、图片模糊》：https://zhuanlan.zhihu.com/p/401287272
+  · gif：android不支持gif，只能用帧动画（Frame Animation）实现
+  · css3的过渡：android只能用补间动画（Tween Animation）实现移动、缩放、旋转、透明度的过渡效果
+  · css3的动画：android只能用属性动画（Property Animation）实现
+  · 非线性动画（ease、linear或tween.js）：android通过interpolator（插值器、动画渲染器）实现
+  · toast：小程序用wx.showToast，android用Toast
+  · 模态对话框：小程序用wx.showModal，android用AlertDialog
+  · 列表选择框：小程序用wx.showActionSheet，android用AlertDialog + setSingleChoiceItems
+  · 实际上，AlertDialog可以实现：基础对话框、简单列表对话框、单选对话框、多选对话框、进度对话框
+  · 进度条：小程序用wx.showLoading，android用ProgressDialog
 
 
 
